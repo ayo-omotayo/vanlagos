@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{index.php} !-f
+
+RewriteRule ^logout/([a-zA-Z0-9-]*)$ logout.php?user_id=$1 [NC,L]
+RewriteRule ^login/([a-zA-Z0-9-]*)$ login.php?reference=$1 [NC,L]
+RewriteRule ^reset-password/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ reset-password.php?selector=$1&validator=$2 [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

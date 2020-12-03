@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{index.php} !-f
+
+RewriteRule ^logout/([a-z-]*)$ logout.php?adm_id=$1 [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
